@@ -1,1 +1,43 @@
-﻿<h1>Trabalhos Animação</h1>
+﻿@model IEnumerable<JoaoAfonso.Domain.Entities.Animacao_trabalhos>
+
+
+<div class="w-100 card border-0 p-4">
+    <div class="card-header bg-success bg-gradient m-lg-0 py-3">
+    <div class="row">
+        <div class="col-12 text-center">
+            <h2 class="text-white py-2">Trabalhos Animação</h2>
+            </div>
+        </div>
+    </div>
+</div>
+
+
+<table class="table table-bordered table-striped">
+    <thead>
+        <tr>
+            <th>Nome</th>
+            <th>Descricao</th>
+            <th>SoftwareUsado</th>
+            <th>Duracao</th>
+            <th>UrlImagem</th>
+            <th>TamanhoFicheiro</th>
+        </tr>
+
+    </thead>
+
+    <tbody>
+        @foreach(var obj in Model)
+        {
+           <tr>
+            <td>@obj.Nome</td>
+            <td>@obj.Descricao</td>
+            <td>@obj.SoftwareUsado</td>
+            <td>@obj.Duracao</td>
+            <td>@obj.UrlImagem</td>
+            <td>@obj.TamanhoFicheiro</td>
+           </tr> 
+        }
+    </tbody>
+
+
+</table>

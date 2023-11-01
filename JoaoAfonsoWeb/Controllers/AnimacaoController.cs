@@ -15,7 +15,7 @@ namespace JoaoAfonsoWeb.Controllers
         public IActionResult Index()
         {
             var animacao = _db.Animacao_Trabalhos.ToList();
-            return View();
+            return View(animacao);
         }
     }
 }
