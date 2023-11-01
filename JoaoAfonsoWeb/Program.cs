@@ -1,7 +1,14 @@
+using JoaoAfonso.Infrastructure.Data;
+using Microsoft.EntityFrameworkCore;
+
 var builder = WebApplication.CreateBuilder(args);
 
 // Add services to the container.
 builder.Services.AddControllersWithViews();
+
+// Ligação à Basa de Dados
+builder.Services.AddDbContext<ApplicationDbContext>(option =>
+  option.UseSqlServer(builder.Configuration.GetConnectionString("DefaultConnection")));
 
 var app = builder.Build();
 
