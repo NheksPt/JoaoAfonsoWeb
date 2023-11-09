@@ -1,4 +1,5 @@
-﻿using JoaoAfonso.Infrastructure.Data;
+﻿using JoaoAfonso.Domain.Entities;
+using JoaoAfonso.Infrastructure.Data;
 using Microsoft.AspNetCore.Mvc;
 
 namespace JoaoAfonsoWeb.Controllers
@@ -17,5 +18,12 @@ namespace JoaoAfonsoWeb.Controllers
             var animacao = _db.Animacao_Trabalhos.ToList();
             return View(animacao);
         }
+
+        public IActionResult Create()
+        {
+        
+            return View();
+        }
+       
     }
 }
