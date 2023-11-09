@@ -14,26 +14,32 @@
                 <div class="form-floating py-2 col-12">
                     <input asp-for="@Model.Nome" class="form-control border shadow" />
                     <label asp-for="Nome" class="ms-2"></label>
+                    <span asp-validation-for="Nome" class="text-danger"></span>
                 </div>
                 <div class="form-floating py-2 col-12">
                     <input asp-for="@Model.Descricao" class="form-control border shadow" />
                     <label asp-for="Descricao" class="ms-2"></label>
+                    <span asp-validation-for="Descricao" class="text-danger"></span>
                 </div>
                 <div class="form-floating py-2 col-12">
                     <input asp-for="@Model.SoftwareUsado" class="form-control border shadow" />
                     <label asp-for="SoftwareUsado" class="ms-2"></label>
+                    <span asp-validation-for="SoftwareUsado" class="text-danger"></span>
                 </div>
                 <div class="form-floating py-2 col-12">
                     <input asp-for="@Model.Duracao" class="form-control border shadow" />
                     <label asp-for="Duracao" class="ms-2"></label>
+                    <span asp-validation-for="Duracao" class="text-danger"></span>
                 </div>
                 <div class="form-floating py-2 col-12">
                     <input asp-for="@Model.UrlImagem" class="form-control border shadow" />
                     <label asp-for="UrlImagem" class="ms-2"></label>
+                    <span asp-validation-for="UrlImagem" class="text-danger"></span>
                 </div>
                 <div class="form-floating py-2 col-12">
                     <input asp-for="@Model.TamanhoFicheiro" class="form-control border shadow" />
                     <label asp-for="TamanhoFicheiro" class="ms-2"></label>
+                    <span asp-validation-for="TamanhoFicheiro" class="text-danger"></span>
                 </div>
 
                 <div class="row pt-2">
