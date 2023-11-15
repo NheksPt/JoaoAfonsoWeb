@@ -28,6 +28,10 @@ namespace JoaoAfonsoWeb.Controllers
         [HttpPost]
         public IActionResult Create(Animacao_trabalhos obj)
         {
+            if (obj.Nome == obj.Descricao)
+            {
+                ModelState.AddModelError("", "The Description cannot match the Name.");
+            }
             if (ModelState.IsValid)
             {
                 _db.Animacao_Trabalhos.Add(obj);
